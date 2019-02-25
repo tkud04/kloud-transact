@@ -69,7 +69,11 @@
                     <li><a asp-controller="Home" asp-action="Shop">Shop</a></li>
                     <li><a asp-controller="Home" asp-action="ProductDetails">Product</a></li>
                     <li><a asp-controller="Home" asp-action="Cart">Cart</a></li>
-                    <li><a asp-controller="Home" asp-action="Checkout">Checkout</a></li>
+                    <li><a asp-controller="Home" asp-action="Auction">Kloud Auction</a></li>
+                    <li><a asp-controller="Home" asp-action="Enterprise">Enterprise</a></li>
+                    <li><a asp-controller="Home" asp-action="KloudPay">KloudPay</a></li>
+                    <li><a asp-controller="Home" asp-action="Checkout">Contact</a></li>
+                    <li><a asp-controller="Home" asp-action="FAQ">FAQ</a></li>
                 </ul>
             </nav>
             <!-- Button Group -->
@@ -79,7 +83,8 @@
             </div>
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a asp-controller="Home" asp-action="Index" class="cart-nav"><img src="~/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+                <a asp-controller="Home" asp-action="Cart" class="cart-nav"><img src="~/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+                <a asp-controller="Home" asp-action="Checkout" class="cart-nav"><img src="~/img/core-img/cart.png" alt=""> Checkout</a>
                 <a href="#" class="fav-nav"><img src="~/img/core-img/favorites.png" alt=""> Favourite</a>
                 <a href="#" class="search-nav"><img src="~/img/core-img/search.png" alt=""> Search</a>
             </div>
@@ -144,7 +149,7 @@
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50" style="background: white; padding: 5px;">
-                           <a asp-controller="Home" asp-action="Index"><img src="~/img/kloudlogo.PNG" alt=""></a>
+                           <a asp-controller="Home" asp-action="Index"><img  src="~/img/kloudlogo.PNG" alt=""></a>
                         </div>
                         <!-- Copywrite Text -->
                         <p class="copywrite"><!-- Link back to Colorlib can't be removed. Licensed under CC BY 3.0. --

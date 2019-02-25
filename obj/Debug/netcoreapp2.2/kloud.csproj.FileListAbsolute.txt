@@ -41,3 +41,4 @@ c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\Shop.g.cshtml.cs
 c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\Cart.g.cshtml.cs
 c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\Checkout.g.cshtml.cs
 c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\ProductDetails.g.cshtml.cs
+c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\FAQ.g.cshtml.cs
