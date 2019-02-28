@@ -11,3 +11,10 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
+	
+	.category-header{
+		color: white;
+		background: green;
+		padding: 6px;
+		margin: 5px;
+	}
