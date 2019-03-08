@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace kloud.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
 		private readonly UserManager<IdentityUser> _userManager;
@@ -29,34 +30,34 @@ namespace kloud.Controllers
 			_pc = productsContext;
 		}
 		
-        [AllowAnonymous]
+        
 		public IActionResult Index()
         {
             return View();
         }
 
-        [AllowAnonymous]
+        
 		public IActionResult Shop()
         {
 			ViewData["MainClass"] = "amado_product_area section-padding-100 clearfix";
             return View();
         }
 
-        [AllowAnonymous]
+        
 		public IActionResult Cart()
         {
 			ViewData["MainClass"] = "cart-table-area section-padding-100";
             return View();
         }
 
-        [AllowAnonymous]
+        
 		public IActionResult Checkout()
         {
 			ViewData["MainClass"] = "cart-table-area section-padding-100";
             return View();
         }
 
-        [AllowAnonymous]
+        
 		public IActionResult ProductDetails()
         {
 			ViewData["MainClass"] = "single-product-area section-padding-100 clearfix";
