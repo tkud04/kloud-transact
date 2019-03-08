@@ -74,6 +74,24 @@ namespace kloud.Controllers
 			//ViewData["MainClass"] = "products-catagories-area";
             return View();
         }
+        
+        public IActionResult Airtime()
+        {
+			//ViewData["MainClass"] = "products-catagories-area";
+            return View();
+        }
+        
+        public IActionResult Hotels()
+        {
+			//ViewData["MainClass"] = "products-catagories-area";
+            return View();
+        }
+        
+        public IActionResult TravelStart()
+        {
+			//ViewData["MainClass"] = "products-catagories-area";
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
