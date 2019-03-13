@@ -42,3 +42,8 @@ c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\Cart.g.cshtml.cs
 c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\Checkout.g.cshtml.cs
 c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\ProductDetails.g.cshtml.cs
 c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\FAQ.g.cshtml.cs
+c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\Airtime.g.cshtml.cs
+c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\Hotels.g.cshtml.cs
+c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\KloudPay.g.cshtml.cs
+c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Home\TravelStart.g.cshtml.cs
+c:\dotnet\kloud\obj\Debug\netcoreapp2.2\Razor\Views\Index.g.cshtml.cs

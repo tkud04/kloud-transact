@@ -23,5 +23,31 @@ namespace kloud.Helpers
 		
 			return ret;
 		}
+		
+		public List<string> getCategories()
+		{
+			List<string> ret = new List<string>();
+			string[] categories = {
+			                       "Phones & Tablets",
+			                       "TV & Electronics",
+								   "Fashion",
+								   "Computers",
+								   "Groceries",
+								   "Unique Bundles",
+								   "Health & Beauty",
+								   "Home & Office",
+								   "Babies, Kids & Toys",
+								   "Games & Consoles",
+								   "Watches & Sunglasses",
+								   "Other Categories"
+			};
+			for(int i = 0; i < categories.Length; i++)
+			{
+				ret.Add(categories[i]);
+			}
+			
+			return ret;
+			
+		}
 	}
 }

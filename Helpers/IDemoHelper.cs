@@ -10,5 +10,6 @@ namespace kloud.Helpers
     public interface IDemoHelper
     {
 		string getRole(string email);
+		List<string> getCategories();
     }
 }
