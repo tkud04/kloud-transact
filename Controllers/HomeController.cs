@@ -43,6 +43,13 @@ namespace kloud.Controllers
 			ViewData["Categories"] = _h.getCategories();
             return View();
         }
+        
+        public IActionResult TopDeals()
+        {
+			ViewData["MainClass"] = "amado_product_area section-padding-100 clearfix";
+			ViewData["Categories"] = _h.getCategories();
+            return View();
+        }
 
         
 		public IActionResult Cart()
