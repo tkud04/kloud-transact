@@ -16,18 +16,7 @@ namespace kloud.Helpers
 {
     public class DemoHelper : IDemoHelper
     {	
-		
-		public string getRole(string email)
-		{
-			string ret = "NoRole";
-		
-			return ret;
-		}
-		
-		public List<string> getCategories()
-		{
-			List<string> ret = new List<string>();
-			string[] categories = {
+       private readonly string[] _categories = {
 			                       "Phones & Tablets",
 			                       "TV & Electronics",
 								   "Fashion",
@@ -41,11 +30,52 @@ namespace kloud.Helpers
 								   "Watches & Sunglasses",
 								   "Other Categories"
 			};
-			for(int i = 0; i < categories.Length; i++)
-			{
-				ret.Add(categories[i]);
-			}
 			
+			private readonly string[] _qs = {
+			                       "phones-ablets",
+			                       "tv-electronics",
+								   "fashion",
+								   "computers",
+								   "groceries",
+								   "unique-bundles",
+								   "health-beauty",
+								   "home-office",
+								   "babies-kids-toys",
+								   "games-consoles",
+								   "watches-sunglasses",
+								   "others"
+			};
+			
+			private readonly List<Categories> _cats; 
+			
+			public DemoHelper()
+           {
+             _cats = new List<Categories>();
+             
+             for(int i = 0; i < _categories.Length; i++)
+			  {
+				_cats.Add(new Categories{Name = _categories[i], q = _qs[i]});
+			  }
+           }
+			
+		
+		public string getRole(string email)
+		{
+			string ret = "NoRole";
+		
+			return ret;
+		}
+		
+		public List<Categories> getCategories()
+		{
+			List<Categories> ret = _cats;
+			return ret;
+			
+		}
+		
+		public Categories getCategory(string q)
+		{
+			Categories ret = _cats.FirstOrDefault(m => m.q == q);
 			return ret;
 			
 		}
