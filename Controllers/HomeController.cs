@@ -44,11 +44,14 @@ namespace kloud.Controllers
             return View();
         }
         
-        public IActionResult TopDeals()
+        public IActionResult TopDeals(string q)
         {
 			ViewData["MainClass"] = "amado_product_area section-padding-100 clearfix";
-			ViewData["Categories"] = _h.getCategories();
-            return View();
+			
+			DealsViewModel dvm = new DealsViewModel();
+			dvm.category = _h.getCategory(q);
+			dvm.categories = _h.getCategories();
+            return View(dvm);
         }
 
         
