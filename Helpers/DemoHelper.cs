@@ -46,7 +46,7 @@ namespace kloud.Helpers
 								   "others"
 			};
 			
-			private readonly List<Categories> _cats; 
+			private List<Categories> _cats; 
 			
 			public DemoHelper()
            {
