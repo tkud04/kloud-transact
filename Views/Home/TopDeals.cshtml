@@ -1,8 +1,7 @@
 @model kloud.Models.DealsViewModel
 
 @{
-    var cc = Model.category;
-    ViewData["Title"] = cc.Name + " - Top Deals";
+    ViewData["Title"] = "Top Deals";
 	List<Categories> categories = (List<Categories>)Model.categories;
 }
 @section ShopSideBar{
