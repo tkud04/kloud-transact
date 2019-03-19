@@ -20,7 +20,7 @@ function(t) {
         }
 
         function s() {
-            $(".stock").fadeOut(), clearInterval(p)
+            clearInterval(p);
         }
         var n = document.getElementById(t);
         if (n) {
@@ -34,6 +34,6 @@ function(t) {
                 d = new Date(o).getTime();
             if (!(c > u && d > c) || e().total <= 0) return void s();
             var p = setInterval(i, 1e3);
-            $(".stock").fadeIn(), i()
+            i();
         }
     }("clockdiv");
