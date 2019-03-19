@@ -4,6 +4,16 @@
     ViewData["Title"] = " Kloud Auctions";
 	List<Categories> categories = (List<Categories>)Model.categories;
 }
+
+@section Styles{
+    <!-- Countdown Style CSS -->
+    <link rel="stylesheet" href="~/css/countdown.css" asp-append-version="true">
+}
+
+@section Scripts{
+    <!-- Countdown js -->
+    <script src="~/js/countdown.js" asp-append-version="true"></script>
+}
 @section ShopSideBar{
         <div class="shop_sidebar_area">
 
