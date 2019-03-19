@@ -13,3 +13,11 @@
 	.rating-star{
 		color: #fbb710;
 	}
+	
+	.auction-digit{
+		font-size: 1.25em;
+    }
+    
+    .auction-text{
+		font-size: 0.65em;
+    }
