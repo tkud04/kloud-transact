@@ -1,6 +1,8 @@
+@model kloud.Models.DealsViewModel
+
 @{
     ViewData["Title"] = "Bundle Products";
-	List<string> categories = (List<string>)ViewData["categories"];
+	List<Categories> categories = (List<Categories>)Model.categories;
 }
 @section ShopSideBar{
         <div class="shop_sidebar_area">
@@ -13,9 +15,13 @@
                 <!--  Catagories  -->
                 <div class="catagories-menu">
                     <ul>
-                        <li class="active"><a class="shop-categories-link" data-cat="@categories[0]" href="#">@categories[0]</a></li>
+                       @{
+                            var catt = categories[0];
+                        }
+                        <li class="active"><a class="shop-categories-link" data-cat="@catt.Name" asp-controller="Home" asp-action="Bundle" asp-route-q="@catt.q">@catt.Name</a></li>
                         @for(int i = 1; i < categories.Count; i++){
-						<li><a class="shop-categories-link" data-cat="@categories[i]" href="#">@categories[i]</a></li>
+                        var cat = categories[i];
+						<li><a class="shop-categories-link" data-cat="@cat.Name" asp-controller="Home" asp-action="Bundle" asp-route-q="@cat.q">@cat.Name</a></li>
 						}
                     </ul>
                 </div>
