@@ -33,7 +33,9 @@ namespace kloud.Controllers
         
 		public IActionResult Index()
         {
-            return View();
+            IndexViewModel ivm = new IndexViewModel();
+			ivm.categories = _h.getCategories();
+            return View(ivm);
         }
 
         
@@ -65,6 +67,16 @@ namespace kloud.Controllers
 			dvm.categories = _h.getCategories();
             return View(dvm);
         }
+        
+        public IActionResult Deals(string q)
+        {
+			ViewData["MainClass"] = "amado_product_area section-padding-100 clearfix";
+			
+			DealsViewModel dvm = new DealsViewModel();
+			dvm.category = _h.getCategory(q);
+			dvm.categories = _h.getCategories();
+            return View(dvm);
+        }
 
         
 		public IActionResult Cart()
@@ -81,7 +93,7 @@ namespace kloud.Controllers
         }
 
         
-		public IActionResult ProductDetails()
+		public IActionResult Deal()
         {
 			ViewData["MainClass"] = "single-product-area section-padding-100 clearfix";
             return View();
