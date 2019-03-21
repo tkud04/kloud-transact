@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Devart.Data.MySql;
 
 namespace kloud.Controllers
 {
@@ -82,6 +83,16 @@ namespace kloud.Controllers
 		public IActionResult Cart()
         {
 			ViewData["MainClass"] = "cart-table-area section-padding-100";
+            return View();
+        }
+        
+        public IActionResult DB()
+        {
+            string[] config = {"us-cdbr-iron-east-05.cleardb.net","b4318af64bea35","9d6ecea4","heroku_1e574819c23f64c"};
+			MySqlConnection mc = _h.getDB(config);
+			mc.Open();
+			ViewData["version"] = mc.ServerVersion;
+			mc.Close();
             return View();
         }
 
