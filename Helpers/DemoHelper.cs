@@ -10,6 +10,7 @@ using kloud.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using System.Collections.Generic;
+using Devart.Data.MySql;
 
 
 namespace kloud.Helpers
@@ -77,6 +78,24 @@ namespace kloud.Helpers
 		{
 			Categories ret = _cats.FirstOrDefault(m => m.q == q);
 			return ret;
+			
+		}
+		
+		public MySqlConnection getDB(string[] csb)
+		{
+			
+            MySqlConnectionStringBuilder myCSB = new MySqlConnectionStringBuilder();
+            myCSB.Port = 3307;
+            myCSB.Host = csb[0];
+            myCSB.UserId = csb[1];
+            myCSB.Password = csb[2];
+            myCSB.Direct = true;
+            myCSB.Compress = true;
+            myCSB.Database = csb[3];
+            myCSB.MaxPoolSize = 150;
+            myCSB.ConnectionTimeout = 30;
+            MySqlConnection myConnection = new MySqlConnection(myCSB.ConnectionString);
+			return myConnection;
 			
 		}
 	}
