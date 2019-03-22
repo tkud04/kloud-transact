@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using kloud.Models;
 using System.Collections.Generic;
 using System.Linq;
-using Devart.Data.MySql;
+using System.Data;
+using MySql.Data;
 
 namespace kloud.Helpers
 {
@@ -13,7 +14,7 @@ namespace kloud.Helpers
 		string getRole(string email);
 		List<Categories> getCategories();
 		Categories getCategory(string q);
-		MySqlConnection getDB(string[] csb);
+		string getDB();
 		
     }
 }

@@ -10,7 +10,9 @@ using kloud.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using System.Collections.Generic;
-using Devart.Data.MySql;
+using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 
 namespace kloud.Helpers
@@ -49,7 +51,9 @@ namespace kloud.Helpers
 			
 			private List<Categories> _cats; 
 			
-			public DemoHelper()
+			private string DbConfig = "server=us-cdbr-iron-east-05.cleardb.net;user=b4318af64bea35;database=heroku_1e574819c23f64c;port=3306;password=9d6ecea4";
+			
+           public DemoHelper()
            {
              _cats = new List<Categories>();
              
@@ -81,22 +85,32 @@ namespace kloud.Helpers
 			
 		}
 		
-		public MySqlConnection getDB(string[] csb)
+		public string getDB()
 		{
+			string ret = "";
+            MySqlConnection conn = new MySqlConnection(DbConfig);
+           
+            try
+            {
+              conn.Open();
+              string sql = "select version()";
+              MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlDataReader rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                ret = rdr[0];
+            }
+            rdr.Close();
+            
+           }
+            catch(Exception ex)
+            {
+               ret = ex.ToString();
+            }
 			
-            MySqlConnectionStringBuilder myCSB = new MySqlConnectionStringBuilder();
-            myCSB.Port = 3307;
-            myCSB.Host = csb[0];
-            myCSB.UserId = csb[1];
-            myCSB.Password = csb[2];
-            myCSB.Direct = true;
-            myCSB.Compress = true;
-            myCSB.Database = csb[3];
-            myCSB.MaxPoolSize = 150;
-            myCSB.ConnectionTimeout = 30;
-            MySqlConnection myConnection = new MySqlConnection(myCSB.ConnectionString);
-			return myConnection;
-			
+			conn.Close();
+			return ret; 
 		}
 	}
 }
