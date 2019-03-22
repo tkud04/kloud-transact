@@ -99,7 +99,7 @@ namespace kloud.Helpers
 
             while (rdr.Read())
             {
-                ret = rdr[0];
+                ret = rdr[0].ToString();
             }
             rdr.Close();
             
