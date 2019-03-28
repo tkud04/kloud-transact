@@ -109,6 +109,12 @@ namespace kloud.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+			//ViewData["MainClass"] = "products-catagories-area";
+            return View();
+        }
+        
         public IActionResult FAQ()
         {
 			//ViewData["MainClass"] = "products-catagories-area";
