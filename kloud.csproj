@@ -12,7 +12,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="2.2.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1" />
     <PackageReference Include="MySql.Data" Version="8.0.15" />
+    <PackageReference Include="MySql.Web" Version="8.0.15" />
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.15" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore.Design" Version="8.0.15" />
   </ItemGroup>
 
 </Project>
