@@ -15,6 +15,7 @@
     <PackageReference Include="MySql.Web" Version="8.0.15" />
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.15" />
     <PackageReference Include="MySql.Data.EntityFrameworkCore.Design" Version="8.0.15" />
+    <PackageReference Include="iFalcao.Exchange.WebServices.NetStandard" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
